@@ -1,6 +1,10 @@
 import React, {Component} from 'react'
 import TodoItem from './TodoItem'
 
+//TODO: Add a 'delete' button and an 'edit' button
+
+//state you can change, props have been set and you cannot change
+
 // export default allows you to not use curly braces when importing
 export default class TodoApp extends Component {
     constructor(props){
@@ -36,6 +40,8 @@ export default class TodoApp extends Component {
     }
 
     render(){
+    // for editing: do a conditional that checks if the current todo you're on is the same as the editId
+    // if it is, render the editTodoForm component instead of the plain todo item
         const list = this.state.todos.map((todo) => {
             return <TodoItem key={todo.id}
                              id={todo.id}
